@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My page</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="style/stylesheet.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/form_payment.js"></script>
+</head>
+<body>
+
+<div id="homepage" data-role = "page">
+
+    <div data-role = "header">
+        <h1>Mijn studie inkomen</h1>
+    </div><!-- /header -->
+
+    <div data-role = "content">
+        <a href="#add_payment" data-role="button" data-theme = "b">Geld toevoegen</a>
+            <ul id="year_list" data-role= "listview" data-filter = "true">
+                <li><a href="#year_2016">2016-17</a></li>
+            </ul>
+    </div><!-- /content -->
+
+    <div data-role = "footer">
+        Footer
+    </div><!-- /footer -->
+
+
+</div><!-- /page -->
+
+<div id="year_2016" data-role="page">
+
+    <div data-role = "header">
+        <h1>2016 Overzicht</h1>
+        <a href="#" data-rel="back">Terug</a>
+    </div><!-- /header -->
+
+    <div data-role = "content">
+        <h1 id="amount_to_pay">2000</h1>
+
+        <table data-role="table" class="ui-responsive" id="table_2016">
+            <thead>
+            <tr>
+                <th data-priority="1">Jaar</th>
+                <th data-priority="2">Bedrag</th>
+                <th data-priority="3">Beschrijving</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </div><!-- /content -->
+
+    <div data-role = "footer">
+        Footer
+    </div><!-- /footer -->
+
+</div><!-- /page -->
+
+<div id="add_payment" data-role="page">
+
+    <div data-role = "header">
+        <h1>Geld toevoegen</h1>
+        <a href="#" data-rel="back">Terug</a>
+    </div><!-- /header -->
+
+    <div data-role = "content">
+        <form id ="form_new_payment">
+            <input type="number" name="year" id="form_year" placeholder="Voor welk jaar?" required/>
+            <input type="number" name="payment" id="form_payment_amount" placeholder="Hoeveel?" required/>
+            <input type="text" name="comment" id="form_payment_comment" placeholder="Beschrijving"/>
+            <input type="submit" value="opslaan" data-theme="b"/>
+        </form>
+    </div><!-- /content -->
+
+    <div data-role = "footer">
+        Footer
+    </div><!-- /footer -->
+
+</div><!-- /page -->
+
+</body>
+</html>
